@@ -21,6 +21,7 @@
 	#wrap{
 		width: 960px;
 		margin: 0 auto;
+		border: 2px double orange;
 	}
 	
 	#imgwrap{
