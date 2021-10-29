@@ -51,6 +51,12 @@
 		overflow: auto;
 		padding: 0 10px 0 10px;
 		text-align: center;
+		height: 600px;
+	}
+	
+	#award::-webkit-scrollbar{
+		display: none;
+		width: 0 !important;
 	}
 	
 	#record{
@@ -58,6 +64,7 @@
 	}
 	#short{
 		width: 400px;
+		height: 600px;
 		margin-left: 5px;
 		display: inline-block;
 		position: absolute;
@@ -65,6 +72,10 @@
 		overflow: auto;
 		padding: 0 10px 0 10px;
 		text-align: center;
+	}
+	#short::-webkit-scrollbar{
+		display: none;
+		width: 0 !important;
 	}
 	
 </style>
