@@ -83,15 +83,91 @@
 	}
 	
 	#upl{
-		
 		box-shadow: none;
 		background-color: black;
 		border: 1px dashed gray;
 		color: white;
 		font-size: 30px;
-		padding-top : 20px;
-		padding-bottom: 20px;
+		padding: 20px 0 20px 0;
+		vertical-align: bottom;
+		cursor: pointer;
 	}
+	#upl:hover{
+		box-shadow: none;
+		background-color: silver;
+		border: 1px dashed white;
+		color: black;
+		font-size: 30px;
+		padding: 20px 0 20px 0;
+		vertical-align: bottom;
+		cursor: pointer;
+	}
+	#upl:active{
+		box-shadow: none;
+		background-color: gray;
+		border: 1px dashed silver;
+		color: black;
+		font-size: 30px;
+		padding: 20px 0 20px 0;
+		vertical-align: bottom;
+		cursor: pointer;
+	}
+	
+	#a{
+		background-color: black;
+		color: white;
+		font-size: 30px;
+		box-shadow: none;
+	}
+	
+	#a label {
+	  display: inline-block;
+	  padding: 16px 0 21px 0;
+	  width: 100%;
+	  height: 100%;
+	  color: white;
+	  font-size: inherit;
+	  line-height: normal;
+	  background-color: black;
+	  cursor: pointer;
+	  border-radius: .25em;
+	  -webkit-transition: background-color 0.2s;
+	  transition: background-color 0.2s;
+	  vertical-align: text-bottom;
+	}
+	
+	#a label:hover {
+	  background-color: silver;
+	  color: black;
+	}
+	
+	#a label:active {
+	  background-color: gray;
+	  color: black;
+	}
+	
+	#a input[type="file"] {
+	  position: absolute;
+	  overflow: hidden;
+	  clip: rect(0, 0, 0, 0);
+	  width: 0px;
+	  height: 0px;
+	  padding: 0;
+	  margin: -1px;
+	  border: 0;
+	}
+	
+	#file_val{
+		background-color: black;
+		color: white;
+		border:none;border-right:0px; border-top:0px; boder-left:0px; boder-bottom:0px;
+		width: 950px;
+	}
+	#file_name_box{
+		border: 2px double orange;
+		width: 958px;
+	}
+	
 	
 </style>
 
@@ -123,9 +199,13 @@
 	</div>
 
 	<form action="Main?command=upload" method="post" enctype="multipart/form-data" id="uploadBox" name="upload">
-		<div id="a"><input type="file" name="pic"></div>
+		<div id="a">
+			<label for="fil">사진 등록</label>
+			<input type="file" name="pic" id="fil" onchange="javascript:document.getElementById('file_val').value=this.value">
+		</div>
 		<div id="b"><input type="submit" value="upload" onclick="check()" id="upl"></div>
 	</form>
+	<div id="file_name_box"><input type="text" readonly="readonly" id="file_val"></div>
 </div>	
 
 <script type="text/javascript">
