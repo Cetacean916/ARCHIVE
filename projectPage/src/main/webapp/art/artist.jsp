@@ -99,7 +99,7 @@
 				</ul>
 			</div>
 			<div id="award">
-				<h2>수상</h2>
+				<h2>수상 이력</h2>
 				<ul>
 				<c:forEach var="list" items="${award }">
 					<li>${list.award }</li>
