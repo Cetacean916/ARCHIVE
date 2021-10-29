@@ -59,10 +59,12 @@
 		width: 110px;
 		height: 33px;
 		border: 4px solid #CC9900;
+		cursor: pointer;
 	}
 	#listBox div a{
 		font-size: 20px;
 		color: inherit;
+		cursor: inherit;
 	}
 	
 	#uploadBox{
