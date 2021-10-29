@@ -164,7 +164,6 @@
 				<th colspan="3" >제목</th>
 				<th>작성자</th>
 				<th colspan="2">작성일</th>
-				<th>조회수</th>
 			</tr>
 			<c:forEach var="list" items="${board }">
 				<tr onclick="location.href='Main?command=detail&num=${list.num }'" id="tt">
@@ -172,7 +171,6 @@
 					<td colspan="3">${list.title }</td>
 					<td>${list.writer }</td>
 					<td colspan="2">${list.regdate }</td>
-					<td>${list.cnt }</td>
 				</tr>
 			</c:forEach>
 		</table>	
